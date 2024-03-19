@@ -6,6 +6,8 @@
   --body-text-color: #918ca4;
 }
 
+/* typography */
+
 body {
   font-family: inter, Arial, Helvetica, sans-serif;
   color: var(--body-text-color);
@@ -39,6 +41,31 @@ p {
   margin-top: 0;
 }
 
+/* links */
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin-left 0.5s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+/* media query */
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.125rem;
@@ -54,5 +81,9 @@ p {
 
   h3 {
     font-size: 1.5rem;
+  }
+
+  .link-arrow {
+    font-size: 0.9375rem;
   }
 }
