@@ -195,6 +195,21 @@ a {
   width: 100%;
 }
 
+/* inputs */
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 0.9375rem 2.1875rem;
+  color: var(--heading-color);
+  outline: 0;
+  font-size: 1.25rem;
+}
+
+::placeholder {
+  color: #cbcdc7;
+}
+
 /* media query */
 
 @media screen and (min-width: 1024px) {
@@ -231,6 +246,10 @@ a {
   }
 
   .btn {
+    font-size: 0.9375rem;
+  }
+
+  .input {
     font-size: 0.9375rem;
   }
 }
