@@ -300,6 +300,25 @@ a {
   top: -6px;
   right: 5%;
 }
+
+/* media object*/
+
+.media {
+  display: flex;
+}
+
+.media__image {
+  margin-top: 0.625rem;
+}
+
+.media__body {
+  margin: 0 1.25rem;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
 /* media query */
 
 @media screen and (min-width: 1024px) {
