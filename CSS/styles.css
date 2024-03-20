@@ -93,6 +93,7 @@ a {
 
 .badge--small {
   font-size: 1rem;
+  padding: 0.3125rem 0.9375rem;
 }
 
 /* lists */
@@ -229,6 +230,76 @@ a {
   margin: 4px;
 }
 
+/* card */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 1.25rem 1.875rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* plans */
+
+.plan__name {
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.plan__price {
+  font-size: 3.75rem;
+}
+
+.plan__billing-cycle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 0.625rem;
+}
+
+.plan__description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 1.25rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(/Images/popular.svg);
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
 /* media query */
 
 @media screen and (min-width: 1024px) {
@@ -270,5 +341,17 @@ a {
 
   .input {
     font-size: 0.9375rem;
+  }
+
+  .plan__name {
+    font-size: 0.875rem;
+  }
+
+  .plan__price {
+    font-size: 3.125rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1rem;
   }
 }
