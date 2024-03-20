@@ -359,7 +359,20 @@ a {
 .quote__author {
   margin-top: 0;
 }
+
+/* grid */
+
+.grid {
+  display: grid;
+}
+
 /* media query */
+
+@media screen and (min-width: 768px) {
+  .grid--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media screen and (min-width: 1024px) {
   body {
@@ -424,5 +437,9 @@ a {
 
   .quote__organization {
     font-size: 1rem;
+  }
+
+  .grid--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
