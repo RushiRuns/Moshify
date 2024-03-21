@@ -432,6 +432,38 @@ a {
   align-self: center;
 }
 
+/* collapsible */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  font-size: 1.875rem;
+  margin-top: 0;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.collapsible--expand .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expand .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
 /* media query */
 
 @media screen and (min-width: 768px) {
