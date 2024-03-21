@@ -184,7 +184,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background-color: #25deff;
+  background-color: #59e2fa;
 }
 
 .btn--accent {
@@ -210,6 +210,11 @@ a {
 .btn--block {
   display: inline-block;
   width: 100%;
+}
+
+.btn--streched {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
 }
 
 /* inputs */
@@ -400,6 +405,33 @@ a {
   right: -32px;
 }
 
+/* Call to action */
+
+.callout {
+  padding: 2.5rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.callout--primary {
+  background-color: var(--primary-color);
+}
+
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 1.875rem;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
 /* media query */
 
 @media screen and (min-width: 768px) {
@@ -414,6 +446,19 @@ a {
 
   .testimonial .quote {
     margin-left: 3.75rem;
+  }
+
+  .callout .grid--cols-2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 1.875rem;
   }
 }
 
