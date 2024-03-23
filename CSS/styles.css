@@ -1,6 +1,6 @@
 :root {
   --primary-color: #2584ff;
-  --secondary-color: #16dcff;
+  --secondary-color: #0dc7ed;
   --accent-color: #ff3400;
   --heading-color: #1b0760;
   --body-text-color: #918ca4;
@@ -164,6 +164,7 @@ a {
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0.625rem 0;
+  outline: none;
   padding: 1.25rem 1.875rem;
   text-align: center;
   text-transform: uppercase;
@@ -218,6 +219,13 @@ a {
   padding-right: 3.75rem;
 }
 
+.btn .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+  vertical-align: middle;
+}
+
 /* inputs */
 
 .input {
@@ -243,7 +251,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 0.9375rem 0.625rem;
+  padding: 0.9375rem 1.25rem;
 }
 
 .input-group .btn {
@@ -571,6 +579,26 @@ a {
   width: 100%;
 }
 
+/* block domain */
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 2.5rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 3.75rem);
+  font-size: 1.25rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 /* media query tablet*/
 
 @media screen and (min-width: 768px) {
@@ -623,6 +651,10 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
   }
 }
 
