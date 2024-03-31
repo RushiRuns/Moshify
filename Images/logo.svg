@@ -23,6 +23,7 @@
         font-size: 32.498px;
         fill: #fff;
         font-family: Inter;
+        font-weight: 700;
       }
     </style>
   </defs>

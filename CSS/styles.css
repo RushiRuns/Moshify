@@ -627,6 +627,25 @@ a {
   margin: 0 auto;
 }
 
+/* feature */
+
+.feature {
+  gap: 2.5rem;
+  margin: 7.5rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 3.75rem;
+}
+
+.feature__heading {
+  margin: 0.625rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
 /* media query tablet*/
 
 @media screen and (min-width: 768px) {
@@ -683,6 +702,10 @@ a {
 
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+  }
+
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
   }
 }
 
