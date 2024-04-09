@@ -1,3 +1,5 @@
+@import "/CSS/normalize.css";
+
 :root {
   --primary-color: #2584ff;
   --secondary-color: #0dc7ed;
@@ -36,7 +38,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  margin-bottom: 0.59rem;
+  margin-bottom: 0.625rem;
   line-height: 1.1;
 }
 
@@ -51,12 +53,16 @@ h2 {
 h3 {
   font-size: 1.875rem;
   font-weight: 400;
+  line-height: 1.3;
 }
 
 p {
   margin-top: 0;
 }
 
+img {
+  width: 100%;
+}
 /* links */
 
 a {
@@ -84,7 +90,6 @@ a {
 
 .badge {
   border-radius: 20px;
-  color: white;
   font-size: 1.25rem;
   font-weight: 600;
   padding: 0.3125rem 1.25rem;
@@ -123,7 +128,7 @@ a {
 }
 
 .list--tick .list__item {
-  padding-left: 0.5rem;
+  padding-left: 0.3125rem;
   margin-bottom: 0.625rem;
 }
 
@@ -171,7 +176,7 @@ a {
   font-weight: 600;
   margin: 0.625rem 0;
   outline: none;
-  padding: 1.25rem 1.875rem;
+  padding: 1.25rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -258,6 +263,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 0.9375rem 1.25rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -274,7 +280,7 @@ a {
 
 .card__header,
 .card__body {
-  padding: 1.25rem 1.875rem;
+  padding: 1.25rem 7%;
 }
 
 .card--primary .card__header {
@@ -309,11 +315,11 @@ a {
 }
 
 .plan__price {
-  font-size: 3.75rem;
+  font-size: 3.125rem;
 }
 
 .plan__billing-cycle {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
   opacity: 0.8;
   margin-right: 0.625rem;
@@ -329,10 +335,6 @@ a {
 
 .plan .list__item {
   margin-bottom: 1.25rem;
-}
-
-.plan--popular {
-  transform: scale(1.1);
 }
 
 .plan--popular .card__header {
@@ -421,18 +423,14 @@ a {
 
 .testimonial {
   padding: 1.875rem;
-  overflow: visible;
 }
 
-.testimonial__img {
+.testimonial__image {
   position: relative;
+  margin: 0 1.875rem;
 }
 
-.testimonial__img img {
-  width: 100%;
-}
-
-.testimonial__img > .icon-container {
+.testimonial__image > .icon-container {
   position: absolute;
   top: 20px;
   right: -32px;
@@ -443,11 +441,11 @@ a {
 .callout {
   padding: 2.5rem;
   border-radius: 5px;
-  color: #fff;
 }
 
 .callout--primary {
   background-color: var(--primary-color);
+  color: #fff;
 }
 
 .callout__heading {
@@ -500,7 +498,7 @@ a {
 /* block */
 
 .block {
-  --vertical-padding: 3.75rem;
+  --vertical-padding: 3.125rem;
   padding: var(--vertical-padding) 1.25rem;
 }
 
@@ -612,8 +610,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--heading-color);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 3.75rem);
   font-size: 1.25rem;
   font-weight: 600;
@@ -662,6 +661,7 @@ a {
 
 .footer {
   background-color: #232323;
+  padding-top: 6.25rem;
 }
 
 .footer__section {
@@ -676,6 +676,8 @@ a {
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 1.5625rem;
+  line-height: 1.5;
 }
 
 .footer a {
@@ -703,11 +705,19 @@ a {
   opacity: 0.3;
 }
 
+.callout-signup {
+  transform: translateY(5rem);
+}
+
 /* media query tablet*/
 
 @media screen and (min-width: 768px) {
   .grid--cols-2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial__image {
+    margin: 0;
   }
 
   .testimonial .quote,
@@ -773,9 +783,8 @@ a {
     justify-self: end;
   }
 
-  .block-showcase__image > img {
-    width: auto;
-    max-width: 700px;
+  .footer {
+    font-size: 1.5rem;
   }
 
   .footer .collapsible__chevron {
@@ -788,7 +797,7 @@ a {
   }
 
   .footer__sections {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
   }
 
   .footer__section {
@@ -852,6 +861,10 @@ a {
     font-size: 0.9375rem;
   }
 
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
   .plan__name {
     font-size: 0.875rem;
   }
@@ -862,6 +875,10 @@ a {
 
   .plan__billing-cycle {
     font-size: 1rem;
+  }
+
+  .plan__description {
+    font-size: 1.0625rem;
   }
 
   .quote {
